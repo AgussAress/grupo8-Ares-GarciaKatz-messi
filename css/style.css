@@ -1,3 +1,4 @@
+/*Header*/
 body {
     /*le ponemos color al fondo*/
     background-color: blanchedalmond;
@@ -29,3 +30,16 @@ ul {
     padding: 30px;
 }
 
+/*Main*/
+
+.peliculas {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*Footer*/
+.integrantes {
+    text-align: end;
+}
