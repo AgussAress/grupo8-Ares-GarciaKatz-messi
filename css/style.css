@@ -1,0 +1,31 @@
+body {
+    /*le ponemos color al fondo*/
+    background-color: blanchedalmond;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    /*ajustamos el tamaño del logo y su radio (hacemos que sea una img circular)*/
+    width: 113px;
+    border-radius: 60px;
+}
+
+ul {
+    /*le sacamos al ul los puntitos de la lista*/
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.navbar a {
+    /*como tenemos un a href, usamos esta seccion para que nuestro texto no aparezca en color azul y subrayado*/
+    text-decoration: none;
+    color:black;
+    padding: 30px;
+}
+
