@@ -1,12 +1,13 @@
 /*Header*/
 body {
     /*le ponemos color al fondo*/
-    background-color: blanchedalmond;
+    background-color: #263238;
 }
 
 header {
     display: flex;
-    justify-content: space-around;
+    background-color: #37474F;
+    justify-content: space-between;
 }
 
 .logo {
@@ -20,13 +21,13 @@ ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    
 }
 
 .navbar a {
     /*como tenemos un a href, usamos esta seccion para que nuestro texto no aparezca en color azul y subrayado*/
     text-decoration: none;
-    color:black;
+    color: #CFD8DC;
+    font-size: 30px;
     padding: 30px;
 }
 
@@ -40,6 +41,12 @@ ul {
 
 
 /*Footer*/
+
+footer {
+    background-color: aliceblue;
+}
+
 .integrantes {
-    text-align: end;
+    text-align: center;
+    color: gray;
 }
