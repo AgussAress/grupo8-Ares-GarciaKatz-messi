@@ -1,12 +1,22 @@
+
+
+video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+ }
+
+
 /*Header*/
-body {
-    /*le ponemos color al fondo*/
-    background-color: #263238;
-}
 
 header {
+    margin: 15px;
     display: flex;
-    background-color: #37474F;
+    background-color: #192124bf;
     justify-content: space-between;
 }
 
@@ -32,6 +42,12 @@ ul {
 }
 
 /*Main*/
+
+main {
+    margin:15px;
+    background-color: #1c262ac6;
+    color: white;
+}
 
 .peliculas {
     display: flex;
