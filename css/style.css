@@ -1,12 +1,16 @@
 
-
+/*En video editamos las especificaciones para posicionar nuestro video de fondo*/
 video {
+    /*ponemos position fixed para que si se desplaza la pagina el video se mantenga en la misma posicion*/
     position: fixed;
+    /*usamos min width y height para que nuestro video ocupe como minimo el 100% de la pantalla*/
     min-width: 100%;
     min-height: 100%;
+    /*el top, left y transform intentamos centrar el video*/
     top: 50%;
     left: 50%; 
     transform: translateX(-50%) translateY(-50%);
+    /*con z index posicionamos el video en el fondo. un z index con un valor alto esta posicionado mas adelante, mientras que uno con menor valor esta posicionado mas atras*/
     z-index: -1;
  }
 
