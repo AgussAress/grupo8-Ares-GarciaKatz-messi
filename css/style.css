@@ -112,5 +112,23 @@ footer {
 
 /* Lo pasamos a celular*/
 @media(max-width: 420px){
+    
+    header {
+        display: flex;
+        margin: 0px;
+        flex-direction: column;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .section-pelis {
+        flex-wrap: wrap;
+    }
+
+    .section-series {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
