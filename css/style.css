@@ -20,13 +20,13 @@ video {
 header {
     margin: 15px;
     display: flex;
-    background-color: #192124bf;
+    background-color: #0e1214d1;
     justify-content: space-between;
 }
 
 .logo {
     /*ajustamos el tamaño del logo y su radio (hacemos que sea una img circular)*/
-    width: 113px;
+    width: 100px;
     border-radius: 60px;
 }
 
@@ -40,7 +40,7 @@ ul {
 .navbar a {
     /*como tenemos un a href, usamos esta seccion para que nuestro texto no aparezca en color azul y subrayado*/
     text-decoration: none;
-    color: #CFD8DC;
+    color: #ffffff;
     font-size: 30px;
     padding: 30px;
 }
@@ -53,23 +53,58 @@ ul {
 
 main {
     margin:15px;
-    background-color: #1c262ac6;
+    background-color: #0d1112db;
     color: white;
 }
 
-.peliculas {
+.peliculas-titulo {
     display: flex;
     justify-content: center;
 }
 
+.section-pelis {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.article-pelis {
+    width: 100%;
+    padding: 30px;
+}
+
+.imgPelis {
+    width:100%;
+    height: 400px;
+}
+
+.section-series {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.article-series {
+    width: 100%;
+    padding: 30px;
+}
+
+.imgSeries {
+    width:100%;
+    height: 400px;
+}
 
 /*Footer*/
 
 footer {
-    background-color: aliceblue;
+    background-color: rgb(42, 43, 44);
 }
 
 .integrantes {
     text-align: center;
-    color: gray;
+    color: rgb(127, 124, 124);
 }
