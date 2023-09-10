@@ -132,3 +132,11 @@ footer {
         flex-wrap: wrap;
     }
 }
+
+
+/* pelis.hmtml */
+.imgDetalles {
+    width:30%;
+    height: 600px;   
+}
+
