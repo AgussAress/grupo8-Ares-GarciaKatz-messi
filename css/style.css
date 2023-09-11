@@ -20,17 +20,18 @@ video {
 header {
     margin: 15px;
     display: flex;
-    background-color: #0e1214d1;
+    background-color: #1C2833;
     justify-content: space-between;
 }
 
 .logo {
     /*ajustamos el tamaño del logo y su radio (hacemos que sea una img circular)*/
-    width: 100px;
+    width: 50px;
     border-radius: 60px;
+    padding: 10px;
 }
 
-ul {
+.navbar {
     /*le sacamos al ul los puntitos de la lista*/
     list-style: none;
     display: flex;
@@ -53,11 +54,17 @@ ul {
 
 main {
     margin:15px;
-    background-color: #0d1112;
+    background-color:#1C2833;
     color: white;
 }
 
 .peliculas-titulo {
+    padding-top: 20px;;
+    display: flex;
+    justify-content: center;
+}
+
+.series-titulo {
     display: flex;
     justify-content: center;
 }
@@ -78,6 +85,7 @@ main {
 .imgPelis {
     width:100%;
     height: 250px;
+    border: 3px solid #000000;
 }
 
 .section-series {
@@ -96,12 +104,15 @@ main {
 .imgSeries {
     width:100%;
     height: 250px;
+    border: 3px solid #000000;
 }
 
 /*Footer*/
 
 footer {
-    background-color: rgb(42, 43, 44);
+    background-color: #1C2833;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .integrantes {
@@ -134,9 +145,30 @@ footer {
 }
 
 
-/* pelis.hmtml */
-.imgDetalles {
-    width:30%;
-    height: 600px;   
+/* pelis.hmtml (el codigo del css en pelis.html es reutilizado para hacer series.html)*/
+.titulo-peli-descripcion {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
 }
 
+.imgDetalles {
+    width:350px;
+    height: 400px; 
+    padding:30px; 
+}
+
+.pelisDetalles {
+    display: flex;
+    flex-direction: row;
+}
+
+.ul-descripcion-peli {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-right: 30px;
+    padding-left: 0px;
+    padding-top: 15px;
+    font-size: 18px;
+}
