@@ -25,7 +25,7 @@
         
         <section>
             <!--Creamos el buscador-->
-            <form action="#" method="get">
+            <form action="./search-result.html" method="get">
                 <div class="contenedor-input">
                     <input type="text" name="buscador" id="buscador" placeholder="Buscar">
 
@@ -51,7 +51,16 @@
                     <li>Genero: acción</li><br>
                     <li><u>Sinopsis:</u></li><br>
                     <li>Una banda organizada de ladrones se propone cometer el atraco del siglo en la Fábrica Nacional de Moneda y Timbre. Cinco meses de preparación quedarán reducidos a once días para poder llevar a cabo con éxito el gran golpe.</li><br>
-                    <li>Agregar a favoritos (crear boton)</li><br>
+                    <li><form action="./favoritos.html" method="get">
+
+                        <div>
+                            <input type="checkbox" name="Agregar" id="Agrego" value="si">
+                            <span>Agregar a favoritos</span>
+                        </div>
+                        <div>
+                            <button type="submit">Si</button>
+                        </div>
+                    </form></li><br>
                 </ul>
             </article>
         </section>
