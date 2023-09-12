@@ -38,6 +38,10 @@ header {
 }
 
 /*Main*/
+.banner {
+    width: 100%;
+    height: 230px;
+}
 
 main {
     margin:15px;
@@ -46,7 +50,7 @@ main {
 }
 
 .peliculas-titulo {
-    padding-top: 20px;;
+    padding-top: 10px;;
     display: flex;
     justify-content: center;
 }
@@ -116,11 +120,13 @@ footer {
     background-color: #1C2833;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin: 0px;
 }
 
 .integrantes {
     text-align: center;
     color: rgb(127, 124, 124);
+    margin: 0px;
 }
 
 
@@ -144,6 +150,23 @@ footer {
     .section-series {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    main {
+        display: flex;
+        margin: 0px;
+        flex-direction: column ;
+    }
+
+    .pelisDetalles {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .ul-descripcion-peli {
+        padding: 10px;
     }
 }
 
@@ -176,6 +199,8 @@ footer {
     font-size: 18px;
 }
 
+
+
 /*buscador titulo es el titulo del search result html. es un h2 que lo centramos*/
 .buscador-titulo {
     padding-top: 15px;
@@ -206,4 +231,21 @@ footer {
     color: rgb(0, 0, 0);
     font-size: 25px;
     justify-content: center;
+}
+
+
+/* Busqueda.html*/
+.buscando {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+
+.section-gif {
+    display: flex;
+    justify-content: center;
+
+
 }
