@@ -2,9 +2,6 @@ body {
     background-color: #35636b;
 }
 
-
-
-
 /*Header*/
 
 header {
@@ -177,4 +174,36 @@ footer {
     padding-left: 0px;
     padding-top: 15px;
     font-size: 18px;
+}
+
+/*buscador titulo es el titulo del search result html. es un h2 que lo centramos*/
+.buscador-titulo {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/*editamos el diseño de generos html*/
+.generos-peliculas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.article-generos-peliculas {
+    margin: 10px;
+    width: 300px;
+    background-color: #a5a1b9;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+}
+
+.article-generos-peliculas a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    justify-content: center;
 }
