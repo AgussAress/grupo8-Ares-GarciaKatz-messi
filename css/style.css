@@ -199,7 +199,9 @@ footer {
     font-size: 18px;
 }
 
-
+.ul-descripcion-peli li {
+    margin:6px;
+}
 
 /*buscador titulo es el titulo del search result html. es un h2 que lo centramos*/
 .buscador-titulo {
