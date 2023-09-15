@@ -237,17 +237,6 @@ footer {
 
 
 /* Busqueda.html*/
-.buscando {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-
-
-
-.section-gif {
-    display: flex;
-    justify-content: center;
-
-
+.noEncontro {
+    display: none;
 }
