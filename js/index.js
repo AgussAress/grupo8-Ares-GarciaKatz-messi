@@ -3,6 +3,8 @@ let url = `https://api.themoviedb.org/3/movie/popular?api_key=${acaVaLaAPIKey}`;
 let url2 = `https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`;  /*Creamos el de series populares */
 let seccionPelis = document.querySelector("#seccionPelis");
 let seccionSeries = document.querySelector("#seccionSeries");
+let url3 = `https://api.themoviedb.org/3/movie/top_rated?api_key=${acaVaLaAPIKey}` /*Creamos para peliculas mejores calificadas*/
+let mejorCalificada = document.querySelector("#mejorCalificada");
 
 
 fetch(url)
@@ -13,7 +15,6 @@ fetch(url)
     let miData = data.results
     let contenido = ""
     for (let i = 0; i<5; i++) {
-        console.log(miData[i]);
         contenido += `<article class="article-pelis">
                             <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
                             <h3>${miData[i].title}</h3>
@@ -37,7 +38,6 @@ fetch(url2)
     let miData = data.results
     let contenido = ""
     for (let i = 0; i<5; i++) {
-        console.log(miData[i]);
         contenido += `<article class="article-pelis">
                             <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
                             <h3>${miData[i].name}</h3>
@@ -53,7 +53,7 @@ fetch(url2)
 }
 );
 
-fetch(url2)
+fetch(url3)
 .then(function(res){
     return res.json()
 })
@@ -64,13 +64,13 @@ fetch(url2)
         console.log(miData[i]);
         contenido += `<article class="article-pelis">
                             <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
-                            <h3>${miData[i].name}</h3>
-                            <p>${miData[i].first_air_date}</p>
+                            <h3>${miData[i].title}</h3>
+                            <p>${miData[i].release_date}</p>
                             <a href="./series.html?id=${miData[i].id}" class="asas">Ver más</a>
                         </article>`;        
                       
     }
-    seccionSeries.innerHTML = contenido;
+    mejorCalificada.innerHTML = contenido;
 })
 .catch(function(err){
     console.log(err)
