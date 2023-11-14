@@ -129,6 +129,13 @@ footer {
     margin: 0px;
 }
 
+.TMDB {
+    width: 200px;
+    padding-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 
 /* Lo pasamos a celular*/
 @media(max-width: 420px){
