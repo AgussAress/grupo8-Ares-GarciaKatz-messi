@@ -55,12 +55,7 @@ let ulrRecomendaciones = `https://api.themoviedb.org/3/movie/${id_pelicula}/reco
 let recomendacion = document.querySelector("#recomendacion")
 let boton = document.querySelector("#botonrecom")
 
-recomendacion.addEventListener('mouseover', function(e) { 
-    recomendacion.style.backgroundColor = 'gold';
-});
-recomendacion.addEventListener('mouseout', function(e) { 
-    recomendacion.style.backgroundColor = 'lightgrey';
-});
+
 
 fetch(ulrRecomendaciones)
 .then(function(response) {
