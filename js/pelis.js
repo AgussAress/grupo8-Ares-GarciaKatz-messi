@@ -51,7 +51,7 @@ fetch(url)
 }
 );
 
-let ulrRecomendaciones = `https://api.themoviedb.org/3/tv/${id_pelicula}/recommendations?api_key=${acaVaLaAPIKey}`
+let ulrRecomendaciones = `https://api.themoviedb.org/3/movie/${id_pelicula}/recommendations?api_key=${acaVaLaAPIKey}`
 let recomendacion = document.querySelector("#recomendacion")
 let boton = document.querySelector("#botonrecom")
 
