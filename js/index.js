@@ -1,9 +1,9 @@
 let acaVaLaAPIKey = "e085a8d4a0502afc1d3c8e65c53af130";
 let url = `https://api.themoviedb.org/3/movie/popular?api_key=${acaVaLaAPIKey}`; /*Creamos el de pelis populares */
 let url2 = `https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`;  /*Creamos el de series populares */
+let url3 = `https://api.themoviedb.org/3/movie/top_rated?api_key=${acaVaLaAPIKey}` /*Creamos para peliculas mejores calificadas*/
 let seccionPelis = document.querySelector("#seccionPelis");
 let seccionSeries = document.querySelector("#seccionSeries");
-let url3 = `https://api.themoviedb.org/3/movie/top_rated?api_key=${acaVaLaAPIKey}` /*Creamos para peliculas mejores calificadas*/
 let mejorCalificada = document.querySelector("#mejorCalificada");
 
 

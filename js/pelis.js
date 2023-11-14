@@ -82,3 +82,5 @@ fetch(ulrRecomendaciones)
 boton.addEventListener("click", function(){
     recomendacion.style.display = "flex";
 })
+
+
