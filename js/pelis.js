@@ -1,6 +1,5 @@
 let acaVaLaAPIKey = "e085a8d4a0502afc1d3c8e65c53af130";
 let qs = location.search;
-let pelisDetalles = document.querySelector("#pelisDetalles")
 /** let id_pelicula = qs; **/
 let qsObj = new URLSearchParams(qs);
 console.log(qsObj);
@@ -21,14 +20,13 @@ fetch(url)
     return res.json()
 })
 .then(function(data){
-    console.log(data);
    titulo.innerText = data.title
    imagenDetalle.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
    calificacion.innerText = data.vote_average
     fecha.innerText = data.release_date
     duracion.innerText = data.runtime
     sinopsis.innerText = data.overview
-    genero.innerText = data.genres[0].name + ", " + data.genres[1].name 
+    genero.innerText = data.genres[0].name
 
 })
 .catch(function(err){
