@@ -55,6 +55,7 @@ fetch(url)
 
 let ulrRecomendaciones = `https://api.themoviedb.org/3/tv/${id_serie}/recommendations?api_key=${acaVaLaAPIKey}`
 let recomendacion = document.querySelector("#recomendacion")
+let boton = document.querySelector("#botonrecom")
 
 recomendacion.addEventListener('mouseover', function(e) { 
     recomendacion.style.backgroundColor = 'gold';
@@ -73,7 +74,7 @@ fetch(ulrRecomendaciones)
     let recomenda = '';
     for (let i = 0; i < 3; i++) {
         recomenda += `<section class="article-pelis">
-                            <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
+                            <img src="https://image.tmdb.org/t/p/w300/${miData[i].poster_path}" alt="" class="imgPelis imgrecom">
                             <h3>${miData[i].name}</h3>
                             <a href="./series.html?id=${miData[i].id}" class="asas">Ver más</a>
                         </section>`;
@@ -83,3 +84,7 @@ fetch(ulrRecomendaciones)
 .catch(function(error) {
     console.log(error);
 });
+
+boton.addEventListener("click", function(){
+    recomendacion.style.display = "flex";
+})

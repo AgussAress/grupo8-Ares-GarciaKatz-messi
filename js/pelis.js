@@ -51,3 +51,39 @@ fetch(url)
 }
 );
 
+let ulrRecomendaciones = `https://api.themoviedb.org/3/tv/${id_pelicula}/recommendations?api_key=${acaVaLaAPIKey}`
+let recomendacion = document.querySelector("#recomendacion")
+let boton = document.querySelector("#botonrecom")
+
+recomendacion.addEventListener('mouseover', function(e) { 
+    recomendacion.style.backgroundColor = 'gold';
+});
+recomendacion.addEventListener('mouseout', function(e) { 
+    recomendacion.style.backgroundColor = 'lightgrey';
+});
+
+fetch(ulrRecomendaciones)
+.then(function(response) {
+    return response.json()
+})
+.then(function(data) {
+    let miData = data.results
+    console.log(miData);
+    let recomenda = '';
+    for (let i = 0; i < 3; i++) {
+        recomenda += `<article class="article-pelis">
+                        <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
+                        <h3>${miData[i].title}</h3>
+                        <p>${miData[i].release_date}</p>
+                        <a href="./pelis.html?id=${miData[i].id}" class="asas">Ver más</a>
+                    </article>`; 
+    }
+    recomendacion.innerHTML=recomenda
+})
+.catch(function(error) {
+    console.log(error);
+});
+
+boton.addEventListener("click", function(){
+    recomendacion.style.display = "flex";
+})

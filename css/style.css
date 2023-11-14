@@ -242,3 +242,12 @@ footer {
 .noEncontro {
     display: none;
 }
+
+.imgrecom{
+    width: 220px;
+    height: 330px;
+}
+
+#recomendacion{
+    display: none;
+}
