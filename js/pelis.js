@@ -26,10 +26,28 @@ fetch(url)
     fecha.innerText = data.release_date
     duracion.innerText = data.runtime
     sinopsis.innerText = data.overview
-    genero.innerText = data.genres[0].name
 
 })
 .catch(function(err){
     console.log(err)
 }
 );
+
+fetch(url)
+.then(function(res){
+    return res.json()
+})
+.then(function(data){
+    let contenido = " "
+    for (let i = 0; i < data.genres.length; i++) {
+        contenido += `<a href="./generos-especificos.html">${data.genres[i].name}</a> `
+        
+    }
+    genero.innerHTML = contenido
+
+})
+.catch(function(err){
+    console.log(err)
+}
+);
+

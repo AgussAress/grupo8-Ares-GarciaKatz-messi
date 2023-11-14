@@ -33,3 +33,53 @@ fetch(url)
     console.log(err)
 }
 );
+
+fetch(url)
+.then(function(res){
+    return res.json()
+})
+.then(function(data){
+    let contenido = " "
+    for (let i = 0; i < data.genres.length; i++) {
+        contenido += `<a href="./generos-especificos.html">${data.genres[i].name}</a> `
+        
+    }
+    genero.innerHTML = contenido
+
+})
+.catch(function(err){
+    console.log(err)
+}
+);
+
+
+let ulrRecomendaciones = `https://api.themoviedb.org/3/tv/${id_serie}/recommendations?api_key=${acaVaLaAPIKey}`
+let recomendacion = document.querySelector("#recomendacion")
+
+recomendacion.addEventListener('mouseover', function(e) { 
+    recomendacion.style.backgroundColor = 'gold';
+});
+recomendacion.addEventListener('mouseout', function(e) { 
+    recomendacion.style.backgroundColor = 'lightgrey';
+});
+
+fetch(ulrRecomendaciones)
+.then(function(response) {
+    return response.json()
+})
+.then(function(data) {
+    let miData = data.results
+    console.log(miData);
+    let recomenda = '';
+    for (let i = 0; i < 3; i++) {
+        recomenda += `<section class="article-pelis">
+                            <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
+                            <h3>${miData[i].name}</h3>
+                            <a href="./series.html?id=${miData[i].id}" class="asas">Ver más</a>
+                        </section>`;
+    }
+    recomendacion.innerHTML=recomenda
+})
+.catch(function(error) {
+    console.log(error);
+});
