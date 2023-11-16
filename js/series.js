@@ -23,8 +23,8 @@ fetch(url)
     console.log(data);
    titulo.innerText = data.original_name
    imagenDetalle.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-   calificacion.innerText = data.vote_average
-    fecha.innerText = data.first_air_date
+   calificacion.innerText = "Calificación: " + data.vote_average
+    fecha.innerText = "Fecha de estreno: " + data.first_air_date
     sinopsis.innerText = data.overview
     genero.innerText = data.genres[0].name
 
@@ -44,7 +44,7 @@ fetch(url)
         contenido += `<a href="./generos-especificos.html">${data.genres[i].name}</a> `
         
     }
-    genero.innerHTML = contenido
+    genero.innerHTML = "Género/s: " + contenido
 
 })
 .catch(function(err){

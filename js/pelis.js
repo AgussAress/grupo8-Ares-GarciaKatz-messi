@@ -22,9 +22,9 @@ fetch(url)
 .then(function(data){
    titulo.innerText = data.title
    imagenDetalle.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-   calificacion.innerText = data.vote_average
-    fecha.innerText = data.release_date
-    duracion.innerText = data.runtime
+   calificacion.innerText = "Calificación: " + data.vote_average
+    fecha.innerText = "Fecha de estreno: " + data.release_date
+    duracion.innerText = "Duración en minutos: " + data.runtime
     sinopsis.innerText = data.overview
 
 })
@@ -43,7 +43,7 @@ fetch(url)
         contenido += `<a href="./generos-especificos.html">${data.genres[i].name}</a> `
         
     }
-    genero.innerHTML = contenido
+    genero.innerHTML = "Género/s: " + contenido
 
 })
 .catch(function(err){
@@ -69,7 +69,7 @@ fetch(ulrRecomendaciones)
         recomenda += `<article class="article-pelis">
                         <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
                         <h3>${miData[i].title}</h3>
-                        <p>${miData[i].release_date}</p>
+                        <p>${miData[i].release_date}</p>                 
                         <a href="./pelis.html?id=${miData[i].id}" class="asas">Ver más</a>
                     </article>`; 
     }
