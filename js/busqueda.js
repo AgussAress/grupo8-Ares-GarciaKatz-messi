@@ -3,8 +3,8 @@ let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 console.log(qsObj);
 let id_busqueda = qsObj.get("buscador");
-console.log(id_busqueda)
-
+console.log(id_busqueda);
+let peliculasTitulo = document.querySelector(".peliculas-titulo");
 
 let url = `https://api.themoviedb.org/3/search/movie?api_key=${acaVaLaAPIKey}&query=${id_busqueda}`;
 
@@ -17,11 +17,11 @@ fetch(url)
     console.log(miData);
     let secBus = document.querySelector("#secbus")
     let contenido = " ";
+    peliculasTitulo.innerText = `Resultados para "${id_busqueda}"`
     for (let i = 0; i < miData.length; i++) {
-        contenido += `<article class="article-pelis">
-                    <img src="./img/star wars 8.webp${miData[i].poster_path}" alt="" class="imgPelis">
+        contenido += `<article id="secbus">
+                    <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
                         <h3>${miData[i].title}</h3>
-                        <p>${miData[i].overview}</p>
                         <a href="./pelis.html" class="asas">Ver más</a>
                     </article>`;
         

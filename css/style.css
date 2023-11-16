@@ -37,6 +37,15 @@ header {
     background-color: #405157bf;
 }
 
+#secbus{
+     width:200px;
+     height: 100%;
+     margin: 15px;
+     display: flex;
+     flex-direction: column;
+     
+}
+
 /*Main*/
 .banner {
     width: 100%;
