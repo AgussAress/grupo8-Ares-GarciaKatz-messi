@@ -28,11 +28,15 @@ fetch(url)
     sinopsis.innerText = data.overview
     genero.innerText = data.genres[0].name
 
+
+
 })
 .catch(function(err){
     console.log(err)
 }
 );
+
+
 
 fetch(url)
 .then(function(res){

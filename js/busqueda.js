@@ -15,7 +15,6 @@ fetch(url)
 })
 .then(function(data) {
     let miData = data.results
-    console.log(miData);
     let contenido = " ";
 })
 .catch(function(err){

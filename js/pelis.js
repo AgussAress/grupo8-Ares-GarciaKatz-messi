@@ -2,9 +2,9 @@ let acaVaLaAPIKey = "e085a8d4a0502afc1d3c8e65c53af130";
 let qs = location.search;
 /** let id_pelicula = qs; **/
 let qsObj = new URLSearchParams(qs);
-console.log(qsObj);
+
 let id_pelicula = qsObj.get('id');
-console.log(id_pelicula)
+
 
 let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${acaVaLaAPIKey}`
 let titulo = document.querySelector(".titulo-peli-descripcion")
@@ -15,23 +15,30 @@ let duracion = document.querySelector("#duracion")
 let sinopsis = document.querySelector("#sinopsis")
 let genero = document.querySelector("#genero")
 
+
+
 fetch(url)
 .then(function(res){
     return res.json()
 })
 .then(function(data){
+    console.log(data);
    titulo.innerText = data.title
    imagenDetalle.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
    calificacion.innerText = "Calificación: " + data.vote_average
     fecha.innerText = "Fecha de estreno: " + data.release_date
     duracion.innerText = "Duración en minutos: " + data.runtime
     sinopsis.innerText = data.overview
+    
 
+    
 })
 .catch(function(err){
     console.log(err)
 }
 );
+
+
 
 fetch(url)
 .then(function(res){
