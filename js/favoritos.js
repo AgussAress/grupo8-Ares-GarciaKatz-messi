@@ -29,7 +29,7 @@ if (favoritos == null || favoritos.length == 0) {
 
             pelisFavoritas += `<article class="article-pelis" id="articleFavs">
                                 <img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="" class="imgPelis">
-                                    <h3>${data.title}</h3>
+                                    <h3 id="tituloh3">${data.title}</h3>
                                     <a href="./pelis.html?id=${data.id}" class="asas">Ver más</a>
                                 </article>`;
             section.innerHTML = pelisFavoritas;

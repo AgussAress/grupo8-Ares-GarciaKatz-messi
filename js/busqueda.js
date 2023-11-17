@@ -21,8 +21,8 @@ fetch(url)
         let contenido = " ";
         for (let i = 0; i < miData.length; i++) {
             contenido += `<article class="article-pelis">
-                        <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
-                            <h3>${miData[i].title}</h3>
+                        <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis" id="pelisBuscador">
+                            <h3 id="tituloh3">${miData[i].title}</h3>
                             <a href="./pelis.html?id=${miData[i].id}" class="asas">Ver más</a>
                         </article>`;
             

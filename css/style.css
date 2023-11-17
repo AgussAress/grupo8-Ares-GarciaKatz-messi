@@ -7,6 +7,7 @@ body {
 header {
     margin: 15px;
     display: flex;
+    margin-top: 0px;
     background-color: #1C2833;
     justify-content: space-between;
 }
@@ -37,6 +38,15 @@ header {
     background-color: #405157bf;
 }
 
+#tituloh3 {
+    color: #ffffff;
+}
+
+#pelisBuscador {
+    min-width: 200px;
+    max-width: 200px;
+}
+
 /*Main*/
 .banner {
     width: 100%;
@@ -53,6 +63,7 @@ main {
     padding-top: 10px;;
     display: flex;
     justify-content: center;
+    color:#ffffff;
 }
 
 .series-titulo {
@@ -123,11 +134,21 @@ main {
     font-size: 30px;
 }
 
+#favoritos {
+    display: flex;
+    justify-content: space-around;
+}
+
 #articleFavs {
     min-width: 200px;
     max-width: 200px;
     justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+#imgGenerosEspecificos {
+    min-width: 200px;
+    max-width: 200px;
 }
 
 /*Footer*/
@@ -148,6 +169,7 @@ footer {
 .TMDB {
     width: 200px;
     padding-top: 2px;
+    padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -280,6 +302,8 @@ a:-webkit-any-link {
 .noMostrar {
     display: none;
 }
+
+
 
 .mostrar {
     display: flex;

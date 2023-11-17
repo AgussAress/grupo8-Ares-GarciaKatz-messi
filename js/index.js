@@ -17,7 +17,7 @@ fetch(url)
     for (let i = 0; i<5; i++) {
         contenido += `<article class="article-pelis">
                             <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
-                            <h3>${miData[i].title}</h3>
+                            <h3 id="tituloh3">${miData[i].title}</h3>
                             <p>${miData[i].release_date}</p>
                             <a href="./pelis.html?id=${miData[i].id}" class="asas">Ver más</a>
                         </article>`;        
@@ -40,7 +40,7 @@ fetch(url2)
     for (let i = 0; i<5; i++) {
         contenido += `<article class="article-pelis">
                             <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
-                            <h3>${miData[i].name}</h3>
+                            <h3 id="tituloh3">${miData[i].name}</h3>
                             <p>${miData[i].first_air_date}</p>
                             <a href="./series.html?id=${miData[i].id}" class="asas">Ver más</a>
                         </article>`;        
@@ -64,7 +64,7 @@ fetch(url3)
         console.log(miData[i]);
         contenido += `<article class="article-pelis">
                             <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
-                            <h3>${miData[i].title}</h3>
+                            <h3 id="tituloh3">${miData[i].title}</h3>
                             <p>${miData[i].release_date}</p>
                             <a href="./series.html?id=${miData[i].id}" class="asas">Ver más</a>
                         </article>`;        

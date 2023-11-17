@@ -17,7 +17,7 @@ fetch(urlPelis)
     for (i=0 ; i < miData.length; i++){
         console.log(miData[i]);
         contenido += `<article class="article-generos-peliculas">
-                        <a href="./generos-especificos.html?id=${miData[i].id}" class="asas" id="generosPelis">${miData[i].name}</a>
+                        <a href="./generos-especificos.html?id=${miData[i].id}" class="asas" id="generosPelis" >${miData[i].name}</a>
                     </article>`
         
     }
@@ -39,7 +39,7 @@ fetch(urlSeries)
     for (i=0 ; i < miData.length; i++){
         console.log(miData[i]);
         contenido += `<article class="article-generos-peliculas">
-                        <a href="./generos-especificos.html" class="asas">${miData[i].name}</a>
+                        <a href="./generos-especificos.html" class="asas" id="tituloh3">${miData[i].name}</a>
                     </article>`
         
     }
