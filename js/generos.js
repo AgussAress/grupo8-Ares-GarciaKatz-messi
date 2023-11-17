@@ -12,6 +12,7 @@ fetch(urlPelis)
 })
 .then(function(data){
     let miData = data.genres
+    console.log(data);
     let contenido = ""
     for (i=0 ; i < miData.length; i++){
         console.log(miData[i]);

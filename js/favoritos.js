@@ -13,7 +13,7 @@ let pelisFavoritas = '';
 
 
 if (favoritos == null || favoritos.length == 0) {
-    section.innerHTML = '<p>No hay favoritos seleccionados</p>'
+    section.innerHTML = '<p id="favs" ><i>No hay favoritos seleccionados</i></p>'
 } else {
 
     for (let i = 0; i < favoritos.length; i++) {
@@ -27,7 +27,7 @@ if (favoritos == null || favoritos.length == 0) {
         .then(function(data) {
             console.log(data);
 
-            pelisFavoritas += `<article class="article-pelis">
+            pelisFavoritas += `<article class="article-pelis" id="articleFavs">
                                 <img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="" class="imgPelis">
                                     <h3>${data.title}</h3>
                                     <a href="./pelis.html?id=${data.id}" class="asas">Ver más</a>
