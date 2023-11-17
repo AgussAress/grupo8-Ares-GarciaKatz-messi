@@ -14,19 +14,27 @@ fetch(url)
 })
 .then(function(data) {
     let miData = data.results
-    console.log(miData);
-    let secBus = document.querySelector("#secbus")
-    let contenido = " ";
     peliculasTitulo.innerText = `Resultados para "${id_busqueda}"`
-    for (let i = 0; i < miData.length; i++) {
-        contenido += `<article id="secbus">
-                    <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
-                        <h3>${miData[i].title}</h3>
-                        <a href="./pelis.html" class="asas">Ver más</a>
-                    </article>`;
-        
+    if (miData.length > 0) {
+        console.log(miData);
+        let secBus = document.querySelector("#secbus")
+        let contenido = " ";
+        for (let i = 0; i < miData.length; i++) {
+            contenido += `<article class="article-pelis">
+                        <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
+                            <h3>${miData[i].title}</h3>
+                            <a href="./pelis.html?id=${miData[i].id}" class="asas">Ver más</a>
+                        </article>`;
+            
+        }
+        secBus.innerHTML = contenido
     }
-    secBus.innerHTML = contenido
+    else{ 
+        let noMostro = document.querySelector(".noMostrar")
+        noMostro.classList.remove("noMostrar")
+        noMostro.classList.add("mostrar")
+    }
+
 })
 .catch(function(err){
     console.log(err);

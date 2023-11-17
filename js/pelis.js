@@ -1,6 +1,5 @@
 let acaVaLaAPIKey = "e085a8d4a0502afc1d3c8e65c53af130";
 let qs = location.search;
-/** let id_pelicula = qs; **/
 let qsObj = new URLSearchParams(qs);
 
 let id_pelicula = qsObj.get('id');
@@ -91,3 +90,28 @@ boton.addEventListener("click", function(){
 })
 
 
+
+/* Favoritos */
+let favoritos = [];
+let recuperoStorage = localStorage.getItem('favoritos');
+if (recuperoStorage != null) {
+    favoritos = JSON.parse(recuperoStorage);
+}
+let fav = document.querySelector('#fav');
+if (favoritos.includes(id_pelicula)) {
+    fav.innerText = 'Quitar de Favoritos'
+}
+
+fav.addEventListener('click', function() {
+    if (favoritos.includes(id_pelicula)) {
+        let indice = favoritos.indexOf(id_pelicula)
+        favoritos.splice(indice, 1);
+        fav.innerText = 'Agregar a favorito'
+    } else {
+        favoritos.push(id_pelicula);
+        fav.innerText = 'Quitar de favorito'
+    }
+
+    let favoritosToString = JSON.stringify(favoritos);
+    localStorage.setItem('favoritos', favoritosToString )
+} )
