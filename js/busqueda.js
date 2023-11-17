@@ -29,11 +29,6 @@ fetch(url)
         }
         secBus.innerHTML = contenido
     }
-    else{ 
-        let noMostro = document.querySelector(".noMostrar")
-        noMostro.classList.remove("noMostrar")
-        noMostro.classList.add("mostrar")
-    }
 
 })
 .catch(function(err){
