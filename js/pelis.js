@@ -46,7 +46,7 @@ fetch(url)
 .then(function(data){
     let contenido = " "
     for (let i = 0; i < data.genres.length; i++) {
-        contenido += `<a href="./generos-especificos.html">${data.genres[i].name}</a> `
+        contenido += `<a href="./generos-especificos.html?id=${data.genres[i].id}">${data.genres[i].name}</a> `
         
     }
     genero.innerHTML = "Género/s: " + contenido
