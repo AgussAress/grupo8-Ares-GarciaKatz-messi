@@ -66,7 +66,7 @@ fetch(url3)
                             <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis">
                             <h3 id="tituloh3">${miData[i].title}</h3>
                             <p>${miData[i].release_date}</p>
-                            <a href="./series.html?id=${miData[i].id}" class="asas">Ver más</a>
+                            <a href="./pelis.html?id=${miData[i].id}" class="asas">Ver más</a>
                         </article>`;        
                       
     }
