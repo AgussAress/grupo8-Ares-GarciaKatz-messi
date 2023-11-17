@@ -1,7 +1,9 @@
-Nosotros realizamos las electivas E y F. 
+Nosotros realizamos las electivas E, F y C. 
 A continuación, detallamos las consignas de los items seleccionados: 
 
 E - La posibilidad de agregar películas o series a “favoritos”. Cada equipo decidirá si agregar series, películas, o ambas. Si el contenido ya se encuentra seleccionado como favorito el usuario deben tener la posibilidad de quitarlo de favoritos. La información de los favoritos seleccionados debe guardarse en localstorage. El dato a guardar debe ser el id de la película, de la serie o ambos si así lo eligieron. Puntaje: 1.
 
 F - Ver favoritos: La página mostrará la lista de películas o de series seleccionadas como favoritas. En la página de favoritos cada contenido debe mostrar su póster o imagen y su título o nombre. Al clickear en cualquiera de las series/ películas favoritas debe redirigir al detalle.
 La información de los favoritos debe obtenerse de localstorage. El dato a obtener es el id de la película o de la serie. Puntaje: 1. Es conveniente que para realizar este punto tengan resuelto correctamente la funcionalidad de agregar películas o series a favoritos.
+
+C - Incorporación de carruseles: utilizando la librería UIKit (https://getuikit.com/docs/installation) deberán mostrar películas y series usando el componente Slider (carrusel). Queda a criterio del equipo en donde aplicarlo (Home, Recomendaciones, Resultados de búsqueda, Detalle de géneros, Reviews, etc). Para implementarlo no deben realizar instalaciones. Únicamente deben incluir etiquetas link y script en donde indica la documentación. El equipo que decida implementarlo podrá pedir orientación a sus profesores para esta parte. Puntaje: 0,5.

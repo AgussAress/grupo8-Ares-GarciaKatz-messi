@@ -16,14 +16,14 @@ fetch(url)
     ///peliculasTitulo.innerText = `Resultados para "${id_busqueda}"`///
     if (miData.length > 0) {
         console.log(miData);
-        let secGen = document.querySelector("#secGen")
+        let secGen = document.querySelector("#galeria")
         let contenido = " ";
         for (let i = 0; i < miData.length; i++) {
-            contenido += `<article class="article-pelis">
+            contenido += `<li>
                         <img src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}" alt="" class="imgPelis" id="imgGenerosEspecificos">
                             <h3 id="tituloh3">${miData[i].title}</h3>
                             <a href="./pelis.html?id=${miData[i].id}" class="asas">Ver más</a>
-                        </article>`;
+                        </li>`;
             
         }
         secGen.innerHTML = contenido
